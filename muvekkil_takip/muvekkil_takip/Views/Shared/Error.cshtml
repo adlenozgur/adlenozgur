@@ -1,0 +1,16 @@
+﻿@model muvekkil_dava.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "Hata";
+}
+
+<h1 class="text-danger">Bir hata oluştu.</h1>
+
+@if (Model?.ShowRequestId == true)
+{
+    <p>
+        <strong>İşlem Kodu:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+<p>Lütfen yöneticinizle iletişime geçin ya da geri dönmeyi deneyin.</p>
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Ana Sayfaya Dön</a>

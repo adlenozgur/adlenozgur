@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\muvekkil_takip.props" />
+</Project>

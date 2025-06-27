@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Müvekkil Dava Takip Sistemi";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-light mb-4">Müvekkil Hesap Takip Sistemi</h1>
+
+    <div class="d-flex justify-content-center gap-4">
+        <a asp-controller="Muvekkiller" asp-action="Index" class="btn btn-lg btn-outline-light p-5 border border-2 rounded shadow-lg">
+            <div>
+                <i class="fas fa-user-friends fa-3x mb-2" style="color: #b388ff;"></i>
+                <h4 style="color: #b388ff;">Müvekkiller</h4>
+            </div>
+        </a>
+        <a asp-controller="Davalar" asp-action="Index" class="btn btn-lg btn-outline-light p-5 border border-2 rounded shadow-lg">
+            <div>
+                <i class="fas fa-balance-scale fa-3x mb-2" style="color: #ce93d8;"></i>
+                <h4 style="color: #ce93d8;">Davalar</h4>
+            </div>
+        </a>
+    </div>
+</div>

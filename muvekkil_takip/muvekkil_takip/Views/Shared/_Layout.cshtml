@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Müvekkil Takip Sistemi</title>
+
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Özel Tema -->
+    <style>
+        body {
+            background-color: #1b1b2f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: #4a148c;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #e1bee7 !important;
+            font-weight: 500;
+        }
+
+            .nav-link:hover {
+                color: #fff !important;
+            }
+
+        .card-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #311b92;
+            border: 2px solid #7e57c2;
+            border-radius: 10px;
+            padding: 30px;
+            color: #f3e5f5;
+            transition: 0.3s ease;
+        }
+
+            .card-link:hover {
+                background-color: #512da8;
+                color: #ffffff;
+            }
+
+            .card-link i {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+
+        footer {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <i class="fas fa-gavel"></i> Müvekkil Takip
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Muvekkiller" asp-action="Index">Müvekkiller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Davalar" asp-action="Index">Davalar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="text-center mt-5 mb-3">
+        &copy; @DateTime.Now.Year - Müvekkil Takip Sistemi
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
